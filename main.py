@@ -11,7 +11,7 @@ import psycopg2
 import yfinance as yf
 
 # Get the current date
-current_date = datetime.date.today() - datetime.timedelta(days=2)
+current_date = datetime.date.today()
 end_date = datetime.date.today()
 # Format the date as a string in the format 'YYYY-MM-DD'
 starting_date = current_date.strftime('%Y-%m-%d')
