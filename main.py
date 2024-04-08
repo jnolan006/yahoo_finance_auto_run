@@ -143,7 +143,7 @@ for _ in range(2):
     # Calculate the sum of 'Diff' values for each group
     sum_of_diff = grouped_df[['bullish_count', 'bearish_count', 'diff']].sum()
 
-    time.sleep(4.5 * 60)
+    time.sleep(1 * 60)
 
 merged_df = pd.merge(price_data_df, sum_of_diff, on='symbol', how='inner')
 for index, row in merged_df.iterrows():
