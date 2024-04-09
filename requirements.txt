@@ -1,1 +1,12 @@
 requests==2.28.1
+import requests
+import pandas as pd
+import json
+import time
+from datetime import datetime
+import pytz
+import matplotlib.pyplot as plt
+import os
+import datetime
+import psycopg2
+import yfinance as yf
