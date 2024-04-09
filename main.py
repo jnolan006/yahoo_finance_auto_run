@@ -59,7 +59,7 @@ def scrape_yahoo_trending_tickers(url):
 result_df = pd.DataFrame(columns=['symbol', 'bullish_count', 'bearish_count', 'diff'])
 all_pulls = []
 symbol_list = []
-for _ in range(2):
+for _ in range(10):
     # Convert UTC timestamp to PST
     current_time_utc = pd.Timestamp.utcnow()
     pst_timezone = pytz.timezone('America/Los_Angeles')
@@ -143,7 +143,7 @@ for _ in range(2):
     # Calculate the sum of 'Diff' values for each group
     sum_of_diff = grouped_df[['bullish_count', 'bearish_count', 'diff']].sum()
 
-    time.sleep(1 * 60)
+    time.sleep(30 * 60)
 
 merged_df = pd.merge(price_data_df, sum_of_diff, on='symbol', how='inner')
 for index, row in merged_df.iterrows():
